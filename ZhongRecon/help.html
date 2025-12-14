@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Zhong Help</title>
+<style>
+body { background: radial-gradient(circle at 18% 18%, #0c0719, #05030c); color:#f0e8ff; font-family:Segoe UI,Arial,sans-serif; padding:24px; }
+h1,h2,h3 { color:#c598ff; text-shadow:0 0 12px rgba(197,152,255,0.35); }
+code { background:#1a0f2c; padding:2px 4px; border-radius:4px; color:#f6edff; border:1px solid #3f1c5a; }
+ol,ul { line-height: 1.7; }
+a { color:#d7b0ff; }
+.panel { background: linear-gradient(135deg, rgba(60,34,94,0.85), rgba(26,12,42,0.9)); border:1px solid #3f1c5a; border-radius:12px; padding:16px; box-shadow:0 8px 22px rgba(0,0,0,0.45); }
+</style>
+</head>
+<body>
+<h1>Zhong – Network Reconnaissance Toolkit</h1>
+<p>Zhong is a LAN-focused reconnaissance and mapping tool that wraps <code>nmap</code> into a parallel, GUI-first workflow.</p>
+
+<div class="panel">
+  <h2>How to use</h2>
+  <ol>
+    <li>Launch the Zhong GUI with <code>python zhong_gui.py</code>.</li>
+    <li>Enter a CIDR subnet or a single IP and choose <b>Subnet</b> or <b>Single host</b>.</li>
+    <li>Pick a profile (Fast/Balanced/Deep/Stealth) or check <b>Full sweep (all ports)</b> to send <code>-p-</code> for TCP/UDP.</li>
+    <li>Toggle extras: OS detection, service/version detection, traceroute, OSINT lookup, WAN scan, DNS disabling, and custom nmap args.</li>
+    <li>Click <b>Start Scan</b>. Live progress is shown in the log; once complete the results table and topology populate.</li>
+    <li>Select any host to view open ports, vulnerability notes, traceroute hops, and OSINT data.</li>
+    <li>Export as JSON/Markdown/HTML. Each export embeds the scan date/time and context metadata.</li>
+  </ol>
+
+  <h2>How it works</h2>
+  <ul>
+    <li>Zhong builds an nmap command using your discovery mode, timing, scan type, and port list (or <code>-p-</code> for full sweeps).</li>
+    <li>Discovery runs first unless single-host mode. TCP/UDP scans, OS detection, and optional OSINT are executed concurrently.</li>
+    <li>Traceroute collects every hop and the destination IP, which are drawn onto the topology map for path visualization.</li>
+    <li>Reports include raw scan details plus the generation timestamp so you can track when the data was produced.</li>
+  </ul>
+</div>
+</body>
+</html>

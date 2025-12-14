@@ -1,0 +1,30 @@
+{
+    "fast": {
+        "name": "Fast",
+        "description": "Quick scan of most common ports.",
+        "tcp_ports": "22,53,80,135,139,443,445,3389,8080",
+        "udp_ports": "53,67,123,137,1900",
+        "timing": "T4"
+    },
+    "balanced": {
+        "name": "Balanced",
+        "description": "Good balance between speed and coverage.",
+        "tcp_ports": "22,53,80,135,139,443,445,1433,1521,3306,3389,5432,5900,5985,5986,8080,8443,9200,27017,5000,9999",
+        "udp_ports": "53,67,68,69,123,137,138,161,162,1900,500,4500,4789,5353,5355",
+        "timing": "T4"
+    },
+    "deep": {
+        "name": "Deep",
+        "description": "Wider coverage with more ports and aggressive timing.",
+        "tcp_ports": "21,22,23,25,53,80,110,111,135,139,143,443,445,465,587,993,995,1433,1521,1723,2049,2375,2376,3306,3389,5432,5672,5900,5985,5986,6379,8000,8080,8081,8443,8888,9200,27017,5000,5001,9999",
+        "udp_ports": "53,67,68,69,111,123,135,137,138,161,162,500,4500,1900,2049,5353,5355,4789",
+        "timing": "T5"
+    },
+    "stealth": {
+        "name": "Stealth",
+        "description": "Low-and-slow minimal surface scan.",
+        "tcp_ports": "22,80,443,445,3389",
+        "udp_ports": "53,123",
+        "timing": "T2"
+    }
+}
